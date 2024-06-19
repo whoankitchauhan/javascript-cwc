@@ -1,32 +1,114 @@
+// Print a message to the console
 console.log("Hey!"); // Prints "Hey" to the console
 
-// Declaring variables
-const name = "Ankit Chauhan"; // Uses `const` for a constant value (unchanging)
-let phone = 7011107200; // Uses `let` for a variable that might change
+// *********************** Variable Declarations ***********************
 
-/*
-// Prefer `let` over `var` for variable declarations
+// Using `const` for constants
+const name = "Ankit Chauhan"; // `const` declares a constant value which cannot be reassigned
+// name = "John Doe"; // This will throw an error: Assignment to constant variable
 
-// Explanation:
+// Using `let` for variables that may change
+let phone = 7011107200; // `let` declares a block-scoped variable that can be reassigned
+phone = 1234567890; // This is valid as `let` allows reassignment
 
-In JavaScript, the keywords `var` and `let` are used to declare variables. However, there's a crucial difference in their scope (visibility) within your code.
+// *********************** var vs let vs const ***********************
 
-- `var`: Variables declared with `var` have a function-scoped visibility. This means they can be accessed from anywhere within the function they're declared in, even from nested blocks of code. However, this can lead to unintended consequences if you're not careful, as a `var` declared inside a loop or conditional statement can potentially conflict with a variable of the same name outside that block.
-
-- `let`: Variables declared with `let` have a block-scoped visibility. This means they can only be accessed from the block of code (such as an if statement, loop, or the entire code block within curly braces `{}`) where they're declared. This provides better control over variable scope and helps prevent accidental variable conflicts, especially in complex code.
-
-// Using `var` (risky!)
-if (true) {
-    var age = 30; // Accessible everywhere in the function
+// Using `var` (function-scoped)
+function varExample() {
+  var age = 25; // `var` is function-scoped
+  if (true) {
+    var age = 30; // Same variable, function-scoped
+    console.log(age); // 30
+  }
+  console.log(age); // 30 (accessible outside the block)
 }
+varExample();
 
-console.log(age); // Might work, might cause issues!
-
-// Using `let` (safe)
-for (let i = 0; i < 5; i++) {
-    console.log(i); // Only accessible inside the loop
+// Using `let` (block-scoped)
+function letExample() {
+  let age = 25; // `let` is block-scoped
+  if (true) {
+    let age = 30; // Different variable, block-scoped
+    console.log(age); // 30
+  }
+  console.log(age); // 25 (not accessible outside the block where it was redefined)
 }
+letExample();
 
-console.log(i); // This will throw an error because `i` is not defined here
+// Using `const` (block-scoped constant)
+function constExample() {
+  const age = 25; // `const` is block-scoped and cannot be reassigned
+  if (true) {
+    const age = 30; // Different variable, block-scoped
+    console.log(age); // 30
+  }
+  console.log(age); // 25 (not accessible outside the block where it was redefined)
+}
+constExample();
 
-*/
+// *********************** Hoisting ***********************
+
+// Hoisting with `var`
+function hoistingVar() {
+  console.log(hoistedVar); // undefined (variable is hoisted but not initialized)
+  var hoistedVar = 10;
+  console.log(hoistedVar); // 10
+}
+hoistingVar();
+
+// Hoisting with `let` and `const`
+function hoistingLetConst() {
+  // console.log(hoistedLet); // ReferenceError: Cannot access 'hoistedLet' before initialization
+  let hoistedLet = 20;
+  console.log(hoistedLet); // 20
+
+  // console.log(hoistedConst); // ReferenceError: Cannot access 'hoistedConst' before initialization
+  const hoistedConst = 30;
+  console.log(hoistedConst); // 30
+}
+hoistingLetConst();
+
+// *********************** Re-declaration ***********************
+
+// Re-declaration with `var`
+function redeclarationVar() {
+  var name = "Alice";
+  var name = "Bob"; // Allowed
+  console.log(name); // Bob
+}
+redeclarationVar();
+
+// Re-declaration with `let` and `const`
+function redeclarationLetConst() {
+  let city = "New York";
+  // let city = "Los Angeles"; // SyntaxError: Identifier 'city' has already been declared
+  city = "Los Angeles"; // Allowed with `let`
+  console.log(city); // Los Angeles
+
+  const country = "USA";
+  // const country = "Canada"; // SyntaxError: Identifier 'country' has already been declared
+  // country = "Canada"; // TypeError: Assignment to constant variable.
+  console.log(country); // USA
+}
+redeclarationLetConst();
+
+// *********************** Best Practices ***********************
+
+// Use `let` for variables that may change
+let userAge = 25;
+userAge = 26;
+
+// Use `const` for variables that should not change
+const userName = "Charlie";
+// userName = "Dave"; // TypeError: Assignment to constant variable.
+
+// Avoid using `var` to prevent unexpected behaviors
+function avoidVar() {
+  var x = 10;
+  if (true) {
+    var x = 20; // Same variable
+    console.log(x); // 20
+  }
+  console.log(x); // 20 (unexpected if you expect block-scoping)
+}
+avoidVar();
