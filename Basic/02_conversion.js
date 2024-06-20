@@ -8,14 +8,14 @@ console.log(typeof(score)); // string (both ways are correct)
 // Convert 'score' to a Number
 let valueInNumber = Number(score);
 console.log(typeof valueInNumber); // number
-console.log(valueInNumber); // NaN (because "hitesh" cannot be converted to a number)
+console.log(valueInNumber); // NaN (because "Ankit" cannot be converted to a number)
 
 // Examples of type conversion to Number
 // "33" => 33
 // "33abc" => NaN
 // true => 1, false => 0
 
-let isLoggedIn = "hitesh";
+let isLoggedIn = "Ankit";
 
 // Convert 'isLoggedIn' to a Boolean
 let booleanIsLoggedIn = Boolean(isLoggedIn);
