@@ -42,17 +42,29 @@ Open the code files in your preferred code editor (e.g., VS Code, Sublime Text).
 The repository is organized into several directories, each focusing on different JavaScript topics. Here is an overview of the structure:
 
 javascript-cwc/
+
 ├── basics/
+
 │   ├── variables.js
+
 │   ├── data-types.js
+
 │   └── control-structures.js
+
 ├── advanced/
+
 │   ├── closures.js
+
 │   ├── promises.js
+
 │   └── async-await.js
+
 ├── patterns/
+
 │   ├── singleton-pattern.js
+
 │   └── prototype-inheritance.js
+
 └── README.md
 
 
