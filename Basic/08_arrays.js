@@ -2,10 +2,10 @@
 
 // Creating arrays
 const numbersArray = [0, 1, 2, 3, 4, 5];
-const heroesArray = ["shaktiman", "naagraj"];
-
-const anotherNumbersArray = new Array(1, 2, 3, 4);
 console.log(numbersArray[1]); // Output: 1
+
+const heroesArray = ["shaktiman", "naagraj"];
+const anotherNumbersArray = new Array(1, 2, 3, 4);
 
 // Array methods
 
