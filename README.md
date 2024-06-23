@@ -43,17 +43,18 @@ The repository is organized into several directories, each focusing on different
 
 javascript-cwc/
 ├── basics/
-│ ├── variables.js
-│ ├── data-types.js
-│ └── control-structures.js
+│   ├── variables.js
+│   ├── data-types.js
+│   └── control-structures.js
 ├── advanced/
-│ ├── closures.js
-│ ├── promises.js
-│ └── async-await.js
+│   ├── closures.js
+│   ├── promises.js
+│   └── async-await.js
 ├── patterns/
-│ ├── singleton-pattern.js
-│ └── prototype-inheritance.js
+│   ├── singleton-pattern.js
+│   └── prototype-inheritance.js
 └── README.md
+
 
 
 Each file contains:
