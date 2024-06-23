@@ -40,6 +40,7 @@ Open the code files in your preferred code editor (e.g., VS Code, Sublime Text).
 ## Repository Structure
 
 The repository is organized into several directories, each focusing on different JavaScript topics. Here is an overview of the structure:
+```bash
 
 javascript-cwc/
 
@@ -67,7 +68,7 @@ javascript-cwc/
 
 └── README.md
 
-
+```
 
 Each file contains:
 
