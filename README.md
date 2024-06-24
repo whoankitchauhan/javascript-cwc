@@ -43,29 +43,17 @@ The repository is organized into several directories, each focusing on different
 ```bash
 
 javascript-cwc/
-
 ├── basics/
-
 │   ├── variables.js
-
 │   ├── data-types.js
-
 │   └── control-structures.js
-
 ├── advanced/
-
 │   ├── closures.js
-
 │   ├── promises.js
-
 │   └── async-await.js
-
 ├── patterns/
-
 │   ├── singleton-pattern.js
-
 │   └── prototype-inheritance.js
-
 └── README.md
 
 ```
