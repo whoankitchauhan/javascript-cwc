@@ -129,6 +129,9 @@ const course = {
 const { courseInstructor } = course;
 console.log(courseInstructor); // Output: Ankit
 
+const { price: money } = course;
+console.log(money); // Output: 999
+
 // JSON Representation: Shows how to convert objects and arrays of objects to JSON strings.
 const jsonObject = JSON.stringify({
   name: "Ankit",
