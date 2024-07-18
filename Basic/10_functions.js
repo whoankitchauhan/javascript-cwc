@@ -132,6 +132,42 @@ function sumArray(numbers) {
 const totalSum = sumArray([1, 2, 3, 4, 5]);
 console.log("Total Sum:", totalSum); // Output: 15
 
+// Function to calculate average of numbers in an array
+function calculateAverage(numbers) {
+  // Calculate sum using reduce with initial value 0
+  const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+
+  // Handle division by 0 edge case
+  if (numbers.length === 0) {
+    return 0; // Return 0 if array is empty to avoid NaN (Not a Number)
+  }
+
+  // Calculate and return the average
+  return sum / numbers.length;
+}
+
+// Examples and Outputs for calculateAverage function
+
+// Example 1: Average Calculation with Numbers
+const numbers1 = [5, 10, 15, 20];
+const average1 = calculateAverage(numbers1);
+console.log("Average:", average1); // Output: Average: 12.5
+
+// Example 2: Average Calculation with Empty Array
+const numbers2 = [];
+const average2 = calculateAverage(numbers2);
+console.log("Average (Empty Array):", average2); // Output: Average (Empty Array): 0
+
+// Example 3: Average Calculation with Single Number
+const numbers3 = [8];
+const average3 = calculateAverage(numbers3);
+console.log("Average (Single Number):", average3); // Output: Average (Single Number): 8
+
+// Example 4: Average Calculation with Negative Numbers
+const numbers4 = [-10, -20, -30];
+const average4 = calculateAverage(numbers4);
+console.log("Average (Negative Numbers):", average4); // Output: Average (Negative Numbers): -20
+
 // Function to get the length of a string
 function getStringLength(str) {
   return str.length;
@@ -181,13 +217,20 @@ function capitalizeFirstLetter(str) {
 const capitalizedString = capitalizeFirstLetter("javascript");
 console.log("Capitalized String:", capitalizedString); // Output: Javascript
 
-// Function to merge two arrays
+// Function to merge two arrays into a single array
 function mergeArrays(array1, array2) {
   return [...array1, ...array2];
 }
 
-const mergedArray = mergeArrays([1, 2], [3, 4]);
-console.log("Merged Array:", mergedArray); // Output: [1, 2, 3, 4]
+// Example 1: Merging [1, 2] and [3, 4]
+const mergedArray1 = mergeArrays([1, 2], [3, 4]);
+console.log("Merged Array:", mergedArray1); // Output: Merged Array: [1, 2, 3, 4]
+
+// Example 2: Merging [10, 20, 30, 40] and [50, 60, 70, 80]
+const array1 = [10, 20, 30, 40];
+const array2 = [50, 60, 70, 80];
+const mergedArray2 = mergeArrays(array1, array2);
+console.log("Merged Array:", mergedArray2); // Output: Merged Array: [10, 20, 30, 40, 50, 60, 70, 80]
 
 /*
 Explanations:
@@ -204,6 +247,7 @@ Explanations:
 - reverseString: Reverses a string.
 - isEvenNumber: Checks if a number is even.
 - sumArray: Sums all numbers in an array.
+- calculateAverage: Calculates the average of numbers in an array.
 - getStringLength: Gets the length of a string.
 - factorial: Returns the factorial of a number.
 - squareRoot: Returns the square root of a number.
