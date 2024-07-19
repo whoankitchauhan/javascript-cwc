@@ -20,7 +20,7 @@ const largeNumber = 1000000;
 console.log(largeNumber.toLocaleString("en-IN")); // Output: 10,00,000
 
 // +++++++++++++ Maths Operations +++++++++++++++++++++++++++++
-
+ 
 console.log(Math); // Output: Math object
 
 // Absolute value
