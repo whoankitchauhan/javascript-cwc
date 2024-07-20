@@ -21,7 +21,7 @@ user.welcomeMessage();
 // Output: Sam, welcome to our website!
 // Output: { username: 'Sam', price: 999, welcomeMessage: [Function: welcomeMessage] }
 
-// Example of 'this' in global context
+// Example of 'this' in the global context
 console.log(this);
 // Output: {} (In strict mode in Node.js, {} represents the module.exports object)
 // Output: Window {...} (In browsers, 'this' refers to the Window object)
@@ -50,6 +50,12 @@ const showGlobalUsernameArrow = () => {
 showGlobalUsernameArrow(); // Output: {} (In Node.js)
 // Output: Window {...} (In browsers)
 
+// Example of different ways to write arrow functions
+const addTwoNumbers = (num1, num2) => num1 + num2;
+
+console.log(addTwoNumbers(3, 4));
+// Output: 7
+
 // Example of arrow function returning an object
 const getUserObject = (firstName, lastName) => ({ firstName, lastName });
 
@@ -68,17 +74,22 @@ numbersArray.forEach((num, index) => {
 // Index: 3, Value: 7
 // Index: 4, Value: 8
 
-// Example of arrow function with concise body
-const addTwoNumbers = (num1, num2) => num1 + num2;
+// Example of demonstrating 'this' behavior and using arrow function
+const user2 = {
+  username: "Ankit",
+  age: 25,
+  showDetails: function () {
+    console.log(`Username: ${this.username}, Age: ${this.age}`);
+    const arrowFunction = () => {
+      console.log(this); // 'this' refers to 'user2' object due to lexical scoping
+    };
+    arrowFunction();
+  },
+};
 
-console.log(addTwoNumbers(3, 4));
-// Output: 7
-
-// Example of arrow function returning an object
-const getUserDetails = (username, age) => ({ username, age });
-
-console.log(getUserDetails("Ankit", 25));
-// Output: { username: 'Ankit', age: 25 }
+user2.showDetails();
+// Output: Username: Ankit, Age: 25
+// Output: { username: 'Ankit', age: 25, showDetails: [Function: showDetails] }
 
 /*
 Explanation:
@@ -93,16 +104,16 @@ Explanation:
 
 - 'this' in Arrow Functions: Arrow functions do not have their own 'this'. Instead, 'this' refers to the lexical context (the enclosing function or global context).
   - Example: In 'showGlobalUsernameArrow', 'this' refers to the enclosing lexical context, which is the global scope in this case.
+  - Example: In 'showDetails', the arrow function 'arrowFunction' inherits 'this' from its enclosing lexical context, which is the 'showDetails' method, thus 'this' refers to the 'user2' object.
 
-- Arrow Functions Returning Objects: Arrow functions can return objects using parentheses to wrap the object literal.
-  - Example: 'getUserObject' returns an object with 'firstName' and 'lastName' properties.
-  - Example: 'getUserDetails' returns an object with 'username' and 'age' properties.
+- Arrow Functions: Arrow functions provide a concise syntax for writing functions and can return objects using parentheses to wrap the object literal.
+  - Example: 'addTwoNumbers' is a single-line arrow function.
+  - Example: 'getUserObject' demonstrates an arrow function returning an object.
 
 - forEach with Arrow Functions: The 'forEach' method executes a provided function once for each array element.
   - Example: 'numbersArray.forEach' logs the index and value of each element in 'numbersArray'.
 */
 
-// Key Concepts
 /*
 Key Concepts:
 - 'this' Keyword:
