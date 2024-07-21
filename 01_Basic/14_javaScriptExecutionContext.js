@@ -31,27 +31,16 @@ innerVar: Inner Variable
 */
 
 // Function Hoisting Example
-hoistedFunction(); // This function is hoisted!
+hoistedFunction(); // Output : This function is hoisted!
 
 function hoistedFunction() {
   console.log("This function is hoisted!");
 }
 
-/*
-Expected Output:
-This function is hoisted!
-*/
-
 // Variable Hoisting Example
 console.log(hoistedVar); // Output: undefined
 var hoistedVar = "This variable is hoisted!";
 console.log(hoistedVar); // Output: This variable is hoisted!
-
-/*
-Expected Output:
-undefined
-This variable is hoisted!
-*/
 
 // Execution Context Phases
 var globalVar = "Global Scope";
@@ -87,10 +76,6 @@ if (true) {
 
 // console.log(blockScopedVar); // Uncommenting this line will result in a ReferenceError
 
-/*
-Expected Output:
-Block Scoped Variable
-*/
 
 // 'this' in Global Context
 console.log(this); // Output: Window object (in browsers), global object (in Node.js)

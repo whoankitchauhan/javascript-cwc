@@ -69,7 +69,7 @@ Explanation:
    - Each call to `recursiveFunction()` adds a new frame to the stack.
    - Eventually, the stack exceeds its limit, causing a stack overflow error.
 
-**Key Points:**
+Key Points:
 - **LIFO Principle:** The call stack operates on the Last In, First Out (LIFO) principle. The most recent function call is always at the top of the stack.
 - **Function Execution:** Each function call creates a new stack frame, which contains the function's execution context. This frame is managed until the function completes.
 - **Completion and Removal:** After a function completes, its stack frame is removed, and control returns to the function that was previously on the stack.
