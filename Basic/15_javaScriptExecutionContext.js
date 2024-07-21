@@ -10,10 +10,10 @@ function outerFunction(outerArg) {
     var innerVar = "Inner Variable";
 
     console.log("globalVar:", globalVar); // Accessible from global context
-    console.log("outerArg:", outerArg); // Accessible from outerFunction context
-    console.log("outerVar:", outerVar); // Accessible from outerFunction context
-    console.log("innerArg:", innerArg); // Accessible from innerFunction context
-    console.log("innerVar:", innerVar); // Accessible from innerFunction context
+    console.log("outerArg:", outerArg);   // Accessible from outerFunction context
+    console.log("outerVar:", outerVar);   // Accessible from outerFunction context
+    console.log("innerArg:", innerArg);   // Accessible from innerFunction context
+    console.log("innerVar:", innerVar);   // Accessible from innerFunction context
   }
 
   innerFunction("Inner Argument");
@@ -63,7 +63,7 @@ function firstFunction() {
     var secondVar = "Second Function Scope";
 
     console.log("globalVar:", globalVar); // Global Scope
-    console.log("firstVar:", firstVar); // First Function Scope
+    console.log("firstVar:", firstVar);   // First Function Scope
     console.log("secondVar:", secondVar); // Second Function Scope
   }
 
@@ -147,3 +147,4 @@ Explanation:
 
 - **Block Scope (ES6):** Variables declared with `let` and `const` are block-scoped and not accessible outside the block they are declared in.
 */
+
