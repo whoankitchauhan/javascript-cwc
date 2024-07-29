@@ -29,7 +29,7 @@ let x = 10;
 x += 5; // Equivalent to x = x + 5
 console.log("Assignment Operators:");
 console.log("x =", x); // 15
- 
+
 x -= 3; // Equivalent to x = x - 3
 console.log("x =", x); // 12
 
@@ -90,7 +90,7 @@ console.log("str1.toUpperCase() =", str1.toUpperCase()); // Convert to uppercase
 console.log("str2.toLowerCase() =", str2.toLowerCase()); // Convert to lowercase: "world"
 
 /*
-Explanation:
+Explanation: 
 - `+` (Concatenation): Combines two strings into one.
 - `.length`: Returns the length of a string.
 - `.toUpperCase()`: Converts the string to uppercase.
@@ -126,6 +126,15 @@ console.log("num1 & num2 =", num1 & num2); // Bitwise AND: 1 (0001 in binary)
 console.log("num1 | num2 =", num1 | num2); // Bitwise OR: 7 (0111 in binary)
 console.log("num1 ^ num2 =", num1 ^ num2); // Bitwise XOR: 6 (0110 in binary)
 console.log("~num1 =", ~num1); // Bitwise NOT: -6 (inverts bits of 0101)
+// Step-by-step explanation:
+// 1. Convert num1 to binary: 00000000 00000000 00000000 00000101
+// 2. Apply NOT: 11111111 11111111 11111111 11111010
+// 3. Interpret as a signed integer using two's complement:
+//    - Leftmost bit is 1, indicating a negative number.
+//    - Invert bits: 00000000 00000000 00000000 00000101
+//    - Add 1 to the result: 00000000 00000000 00000000 00000110
+//    - Result is -6
+
 console.log("num1 << 1 =", num1 << 1); // Bitwise left shift: 10 (1010 in binary)
 console.log("num1 >> 1 =", num1 >> 1); // Bitwise right shift: 2 (0010 in binary)
 
