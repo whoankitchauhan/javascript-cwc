@@ -8,6 +8,18 @@ if (temperature > 25) {
   console.log("It's warm outside."); // Executes if temperature is greater than 25
 }
 
+const userCredits = 10;
+
+// If the user has more than 5 credits, perform multiple actions
+if (userCredits > 5)
+    console.log("Credits check passed - Action 1: Access granted"),
+    console.log("Credits check passed - Action 2: Feature unlocked"),
+    console.log("Credits check passed - Action 3: Bonus awarded"),
+    console.log("Credits check passed - Action 4: Discount applied"),
+    console.log("Credits check passed - Action 5: Free item added"),
+    console.log("Credits check passed - Action 6: Special offer sent");
+else console.log("Insufficient credits - Access denied");
+
 // 2. if-else Statement
 const isRaining = false;
 
