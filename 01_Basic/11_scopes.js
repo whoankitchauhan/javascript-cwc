@@ -110,7 +110,7 @@ console.log(hoistedVar); // Output: undefined (hoistedVar is hoisted but not ini
 var hoistedVar = "I am hoisted";
 console.log(hoistedVar); // Output: I am hoisted
 
-// 5. Temporal Dead Zone (TDZ) with 'let' and 'const'
+// 5. Temporal Dead Zone (TDZ) with 'let' and 'const' 
 if (true) {
   // console.log(tdzVar); // Error: Cannot access 'tdzVar' before initialization
   let tdzVar = "I am in TDZ until this line";
