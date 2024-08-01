@@ -31,7 +31,7 @@ for (let num = 1; num <= 3; num++) {
 // 3. Array Iteration with For Loop: Listing Employee Names
 console.log("\nArray Iteration with For Loop: Listing Employee Names");
 
-let employees = ["Alice", "Bob", "Charlie"];
+let employees = ["Ankit", "Bobby", "Chetan"];
 for (let index = 0; index < employees.length; index++) {
   const employee = employees[index];
   console.log(`Employee name: ${employee}`);
@@ -62,7 +62,7 @@ console.log(
 
 for (let index = 1; index <= 10; index++) {
   if (index % 3 === 0) {
-    console.log(`Skipping number divisible by 3: ${index}`);
+    console.log(`Skipping number ${index} because its divisible by 3`);
     continue; // Skips the rest of the loop body for this iteration
   }
   console.log(`Number: ${index}`);
@@ -82,24 +82,48 @@ while (taskIndex < tasksInProgress.length) {
 // Explanation:
 // The while loop iterates over an array of tasks and logs each task's status,
 // running as long as there are tasks remaining.
-
 // 7. Do-While Loop Example: Ensuring Minimum Execution for User Authentication Attempt
 console.log(
   "\nDo-While Loop Example: Ensuring Minimum Execution for User Authentication Attempt"
 );
 
 let authAttempts = 0;
+const maxAttempts = 3;
 let isAuthenticated = false;
+const correctPassword = "password123"; // Simulate correct password
+
+// Simulated user inputs
+const userInputs = ["wrongpassword", "password123"]; // Example user input: first attempt wrong, second attempt correct
+
 do {
   console.log(`Authentication attempt ${authAttempts + 1}`);
-  // Simulate authentication attempt
-  isAuthenticated = authAttempts >= 1; // Assume success after 1 attempt for example purposes
+  const enteredPassword = userInputs[authAttempts] || ""; // Get the simulated user input
+
+  // Simulate checking password
+  if (enteredPassword === correctPassword) {
+    isAuthenticated = true;
+    console.log("Authentication successful!");
+  } else {
+    console.log("Incorrect password. Please try again.");
+  }
   authAttempts++;
-} while (!isAuthenticated && authAttempts < 3);
-console.log(`User authenticated: ${isAuthenticated}`);
+} while (!isAuthenticated && authAttempts < maxAttempts);
+
+if (!isAuthenticated) {
+  console.log(
+    "Maximum authentication attempts reached. Please try again later."
+  );
+} else {
+  console.log(`User authenticated: ${isAuthenticated}`);
+}
+
 // Explanation:
 // The do-while loop ensures the authentication attempt runs at least once,
-// and continues until successful authentication or the maximum attempts is reached.
+// and continues until successful authentication or the maximum attempts are reached.
+// Simulated user inputs are used for the demonstration.
+// If the entered password matches the correct password, authentication is successful.
+// If the password is incorrect, an error message is displayed, and another attempt is made.
+// If the maximum number of attempts is reached without successful authentication, a message is displayed indicating failure.
 
 // 8. For...In Loop Example: Iterating Over Object Properties
 console.log("\nFor...In Loop Example: Iterating Over Object Properties");
