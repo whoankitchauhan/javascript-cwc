@@ -101,7 +101,7 @@ do {
 
   // Simulate checking password
   if (enteredPassword === correctPassword) {
-    isAuthenticated = true;
+    isAuthenticated = true; 
     console.log("Authentication successful!");
   } else {
     console.log("Incorrect password. Please try again.");
