@@ -211,7 +211,7 @@ console.log(transformedArray);
 
 // 13. Array.reduce Method Example: Summing Up Array Elements
 console.log("\nArray.reduce Method Example: Summing Up Array Elements");
- 
+
 const numbers = [1, 2, 3, 4, 5];
 
 const sum = numbers.reduce((accumulator, currentValue) => {
@@ -236,3 +236,4 @@ console.log(`Sum of array elements: ${sum}`);
 // 10. Array.filter Method: Filters elements based on a condition.
 // 11. Array.map Method: Transforms each element in an array.
 // 12. Array.reduce Method: Accumulates array values into a single result.
+ 
