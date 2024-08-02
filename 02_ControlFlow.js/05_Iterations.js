@@ -62,7 +62,7 @@ console.log(
 
 for (let index = 1; index <= 10; index++) {
   if (index % 3 === 0) {
-    console.log(`Skipping number ${index} because its divisible by 3`);
+    console.log(`Skipping number ${index} because it's divisible by 3`);
     continue; // Skips the rest of the loop body for this iteration
   }
   console.log(`Number: ${index}`);
@@ -82,6 +82,7 @@ while (taskIndex < tasksInProgress.length) {
 // Explanation:
 // The while loop iterates over an array of tasks and logs each task's status,
 // running as long as there are tasks remaining.
+
 // 7. Do-While Loop Example: Ensuring Minimum Execution for User Authentication Attempt
 console.log(
   "\nDo-While Loop Example: Ensuring Minimum Execution for User Authentication Attempt"
@@ -101,7 +102,7 @@ do {
 
   // Simulate checking password
   if (enteredPassword === correctPassword) {
-    isAuthenticated = true; 
+    isAuthenticated = true;
     console.log("Authentication successful!");
   } else {
     console.log("Incorrect password. Please try again.");
@@ -208,6 +209,20 @@ console.log(transformedArray);
 // In this example, numbers are first multiplied by 10, then 1 is added to each,
 // and finally filtered for numbers greater than or equal to 40.
 
+// 13. Array.reduce Method Example: Summing Up Array Elements
+console.log("\nArray.reduce Method Example: Summing Up Array Elements");
+
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
+
+console.log(`Sum of array elements: ${sum}`);
+// Explanation:
+// The reduce method accumulates array values into a single result.
+// In this example, it sums up all the numbers in the array.
+
 // Summary of Loop Types and Control Statements:
 // 1. For Loop: Executes a block of code a specific number of times.
 // 2. Nested For Loop: Loops within loops, useful for multi-dimensional tasks like multiplication tables.
@@ -220,3 +235,4 @@ console.log(transformedArray);
 // 9. Array.forEach Method: Executes a function on each array element.
 // 10. Array.filter Method: Filters elements based on a condition.
 // 11. Array.map Method: Transforms each element in an array.
+// 12. Array.reduce Method: Accumulates array values into a single result.
