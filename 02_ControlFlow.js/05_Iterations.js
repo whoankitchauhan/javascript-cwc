@@ -211,7 +211,7 @@ console.log(transformedArray);
 
 // 13. Array.reduce Method Example: Summing Up Array Elements
 console.log("\nArray.reduce Method Example: Summing Up Array Elements");
-
+ 
 const numbers = [1, 2, 3, 4, 5];
 
 const sum = numbers.reduce((accumulator, currentValue) => {
