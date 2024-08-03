@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation Examples</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="header">DOM Manipulation Example</h1>
+    </header>
+
+    <section id="examples">
+      <h2>Change Content</h2>
+      <div id="content">Original Content</div>
+      <button id="change-content" class="btn">Change Content</button>
+
+      <h2>Change Styles</h2>
+      <div id="style-box" class="box">Styled Box</div>
+      <button id="change-style" class="btn">Change Style</button>
+
+      <h2>Add/Remove Classes</h2>
+      <div id="class-box" class="box">Class Box</div>
+      <button id="toggle-class" class="btn">Toggle Class</button>
+
+      <h2>Create and Append Elements</h2>
+      <div id="append-container">
+        <p>Current Elements:</p>
+        <div id="element-list">None</div>
+      </div>
+      <button id="add-element" class="btn">Add Element</button>
+
+      <h2>Remove Elements</h2>
+      <div id="remove-container">
+        <div id="remove-me">Element to Remove</div>
+      </div>
+      <button id="remove-element" class="btn">Remove Element</button>
+
+      <h2>Clone Elements</h2>
+      <div id="clone-container">
+        <div id="clone-me">Element to Clone</div>
+      </div>
+      <button id="clone-element" class="btn">Clone Element</button>
+
+      <h2>Event Listeners</h2>
+      <button id="event-button" class="btn">Click Me</button>
+
+      <h2>Form Handling</h2>
+      <form id="myForm">
+        <input type="text" id="textInput" value="Sample input" />
+        <button type="submit">Submit Form</button>
+      </form>
+
+      <h2>DOM Traversal Example</h2>
+      <div id="parent">
+        <div>First Child</div>
+        <div>Second Child</div>
+        <div>Last Child</div>
+      </div>
+      <button id="traverse-dom" class="btn">Log DOM Traversal</button>
+    </section>
+
+    <script src="script1.js"></script>
+  </body>
+</html>
